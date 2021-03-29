@@ -16,7 +16,7 @@ then
 fi
 
 qemu-system-x86_64 \
-    -m 1G \
+    -m 512 \
     -drive if=pflash,format=raw,readonly,file=$DEVENV_DIR/OVMF_CODE.fd \
     -drive if=pflash,format=raw,file=$DEVENV_DIR/OVMF_VARS.fd \
     -drive if=ide,index=0,media=disk,format=raw,file=$DISK_IMG \
