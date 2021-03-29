@@ -23,4 +23,5 @@ qemu-system-x86_64 \
     -device nec-usb-xhci,id=xhci \
     -device usb-mouse -device usb-kbd \
     -monitor stdio \
+    -vnc 0.0.0.0:0,password
     $QEMU_OPTS
