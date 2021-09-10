@@ -8,13 +8,14 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
+# cd /home/vagrant/osbook/$VERSION/kernel/; make
 # rm /home/vagrant/edk2/MikanLoaderPkg
 # ln -s /home/vagrant/osbook/$VERSION/MikanLoaderPkg/ /home/vagrant/edk2/   
-# source /home/vagrant/edk2/edksetup.sh
+# cd /home/vagrant/edk2/; source edksetup.sh
 
-# build 
+# build
 
-# bash /home/vagrant/osbook/devenv/run_qemu.sh /home/vagrant/edk2/Build/MikanLoaderX64/DEBUG_CLANG38/X64/Loader.efi /home/vagrant/osbook/$VERSION/kernel/kernel.elf
+# sh build_and_run.sh day0Xa
 
 bash $HOME/osbook/devenv/run_qemu.sh $HOME/edk2/Build/MikanLoaderX64/DEBUG_CLANG38/X64/Loader.efi ./$VERSION/kernel/kernel.elf
 
