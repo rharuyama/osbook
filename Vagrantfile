@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
      #apt-get update
      #apt-get install -y apache2
      sudo apt-get update -y
-     sudo apt-get install -y clang-9 lldb-9 lld-9 nasm make qemu uuid-dev python3-distutils llvm-9 qemu-system-x86
+     sudo apt-get install -y clang lldb lld nasm make qemu uuid-dev python3-distutils llvm qemu-system-x86
    SHELL
 
   # config.vm.provision :shell, :path => "bootstrap.sh", :privileged => true
