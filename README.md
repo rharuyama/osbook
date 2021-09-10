@@ -14,10 +14,24 @@ VirtualBox（以下VB）, Vagrantを事前にインストールし，次のコ�
 `vagrant ssh`  
 するとVB内にSSH接続される．  
 `cd osbook`  
-`sh run.sh`  
+`sh build_and_run.sh day0Xa`  
 を行うとQEMUのコンソールに入るので，以下のコマンドでパスワードを設定する．  
 `(qemu) set_password vnc hogehoge`  
 その後，Finder->Command+K->`vnc://localhost:15900`に接続->パスワード`hogehoge`を入力して，"TianoCore"のロゴとともに画面が表示されたら成功である．
+
+## ビルドの仕方
+
+```
+cd /home/vagrant/osbook/<version>/kernel/
+make
+cd /home/vagrant/edk2/
+rm MikanLoaderPkg
+ln -s /home/vagrant/osbook/<version>/MikanLoaderPkg/ .
+source edksetup.sh
+build
+cd ../osbook/
+sh build build_and_run.sh <version>
+```
 
 ## 参考文献
 この本をやっています：  

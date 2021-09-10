@@ -44,7 +44,7 @@ extern "C" void KernelMain(const FrameBufferConfig& frame_buffer_config) {
   }
   for(int x = 0; x < 200; ++x){
     for(int y = 0; y < 100; ++y){
-      WritePixel(frame_buffer_config, 100 + x, 100 + y, {0, 255, 0});
+      WritePixel(frame_buffer_config, 100 + x, 100 + y, {255, 0, 255});
     }
   }
   while (1) __asm__("hlt");
