@@ -30,7 +30,11 @@ ln -s /home/vagrant/osbook/<version>/MikanLoaderPkg/ .
 source edksetup.sh
 build
 cd ../osbook/
-sh build build_and_run.sh <version>
+sh build_and_run.sh <version>
+```
+QEMUコンソールの中に入るので，以下のコマンドでパスワードを設定する．  
+```
+(qemu) set_password vnc hogehoge
 ```
 
 ## 参考文献
